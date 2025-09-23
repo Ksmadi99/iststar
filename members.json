@@ -4,16 +4,16 @@
     "age": 20,
     "nationality": "South Korean",
     "position": "Main Vocalist, Rapper",
-    "funFact": "Former TWS pre-debut trainee; specialty in leg wrestling!",
+    "funFact": "Former TWS pre-debut trainee; rumored to lead vocals in IST Star after topping Episode 8 polls on Boys II Planet.",
     "instagram": "https://www.instagram.com/p_donggyu_official/",
-    "photo": "https://source.unsplash.com/200x200/?kpop,boy,portrait&sig=1"
+    "photo": "https://source.unsplash.com/200x200/?kpop,vocalist&sig=1"
   },
   {
     "name": "Kim Si Hwan",
     "age": 19,
     "nationality": "South Korean",
     "position": "Lead Dancer, Sub-Vocalist",
-    "funFact": "Apologized for past immaturity; strong stage presence from Boys II Planet.",
+    "funFact": "Apologized for past trainee drama; rumors say his redemption arc secures his spot with viral dance covers.",
     "instagram": "https://www.instagram.com/kim_sihwan_ist/",
     "photo": "https://source.unsplash.com/200x200/?kpop,dancer&sig=2"
   },
@@ -22,7 +22,7 @@
     "age": 17,
     "nationality": "Japanese",
     "position": "Main Dancer",
-    "funFact": "Known as the 'push-up guy'; trained only 6 months before the show.",
+    "funFact": "The 'push-up guy' from training clips; X rumors hype his global appeal for Japan promo post-debut.",
     "instagram": "https://www.instagram.com/rensho_ist_jp/",
     "photo": "https://source.unsplash.com/200x200/?japanese,idol&sig=3"
   },
@@ -31,35 +31,35 @@
     "age": 16,
     "nationality": "Thai",
     "position": "Lead Rapper, Visual",
-    "funFact": "Good at dancing; brings international flair to the group.",
+    "funFact": "Brings Thai flair; fan leaks suggest he's the 'visual center' in rumored space concept MV.",
     "instagram": "https://www.instagram.com/arctic_ist_th/",
     "photo": "https://source.unsplash.com/200x200/?thai,boy&sig=4"
   },
   {
-    "name": "Unknown Member 1",
+    "name": "Minho (Rumored Unknown 1)",
     "age": "?",
-    "nationality": "?",
-    "position": "Sub-Vocalist",
-    "funFact": "Mystery trainee – debut surprise incoming!",
-    "instagram": "https://www.instagram.com/ist_star_member1/",
-    "photo": "https://source.unsplash.com/200x200/?mystery,kpop&sig=5"
+    "nationality": "South Korean",
+    "position": "Sub-Vocalist, All-Rounder",
+    "funFact": "Speculated Korean trainee from leaked lists; rumored for harmony focus after Episode 10 duet.",
+    "instagram": "https://www.instagram.com/ist_star_minho/",
+    "photo": "https://source.unsplash.com/200x200/?kpop,vocal&sig=5"
   },
   {
-    "name": "Unknown Member 2",
+    "name": "Jae (Rumored Unknown 2)",
     "age": "?",
-    "nationality": "?",
+    "nationality": "Chinese",
     "position": "Main Rapper",
-    "funFact": "Teased in rumors; expected to bring fire lyrics.",
-    "instagram": "https://www.instagram.com/ist_star_member2/",
-    "photo": "https://source.unsplash.com/200x200/?rapper,portrait&sig=6"
+    "funFact": "International wildcard; X threads buzz about his bilingual raps for global debut push.",
+    "instagram": "https://www.instagram.com/ist_star_jae/",
+    "photo": "https://source.unsplash.com/200x200/?chinese,rapper&sig=6"
   },
   {
-    "name": "Unknown Member 3",
-    "age": "?",
-    "nationality": "?",
-    "position": "Center, All-Rounder",
-    "funFact": "The wildcard – fans are buzzing!",
-    "instagram": "https://www.instagram.com/ist_star_member3/",
-    "photo": "https://source.unsplash.com/200x200/?kpop,center&sig=7"
+    "name": "Unknown Maknae (Rumored Unknown 3)",
+    "age": 15,
+    "nationality": "South Korean",
+    "position": "Lead Dancer, Maknae",
+    "funFact": "Youngest speculated; fans predict energetic choreo role in late 2025 teaser.",
+    "instagram": "https://www.instagram.com/ist_star_maknae/",
+    "photo": "https://source.unsplash.com/200x200/?kpop,young&sig=7"
   }
 ]
