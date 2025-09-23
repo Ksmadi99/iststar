@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IST Star - Upcoming Boy Group by IST Entertainment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background: linear-gradient(135deg, #1a1a2e, #16213e); color: #fff; }
+        header { background: rgba(0,0,0,0.8); padding: 10px 20px; position: sticky; top: 0; z-index: 100; border-bottom: 2px solid #ff6b6b; }
+        .nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+        .nav h1 { margin: 0; font-size: 2em; color: #ff6b6b; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .nav-buttons { display: flex; gap: 10px; }
+        .nav-buttons button { background: #ff6b6b; border: none; padding: 10px 20px; color: #fff; font-size: 1em; cursor: pointer; border-radius: 5px; transition: background 0.3s; }
+        .nav-buttons button:hover { background: #e55a5a; }
+        .nav-buttons button.active { background: #fff; color: #1a1a2e; }
+        .section { max-width: 1200px; margin: 20px auto; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px; display: none; }
+        .section.active { display: block; }
+        .intro, .schedule, .news, .support { text-align: center; }
+        .members { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 20px; }
+        .member-card { background: rgba(255,255,255,0.1); border-radius: 10px; padding: 15px; text-align: center; transition: transform 0.3s; }
+        .member-card:hover { transform: scale(1.05); }
+        .member-card img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid #ff6b6b; }
+        .member-name { font-size: 1.5em; margin: 10px 0; color: #ff6b6b; }
+        .social a { color: #fff; font-size: 1.5em; margin: 0 10px; text-decoration: none; }
+        footer { background: rgba(0,0,0,0.8); padding: 20px; text-align: center; }
+        footer .social { margin-top: 10px; }
+        @media (max-width: 768px) { 
+            .nav { flex-direction: column; gap: 10px; }
+            .nav-buttons { flex-wrap: wrap; justify-content: center; }
+            .nav-buttons button { padding: 8px 15px; font-size: 0.9em; }
+            h1 { font-size: 1.8em; }
+            .members { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <h1><i class="fas fa-star"></i> IST Star <i class="fas fa-star"></i></h1>
+            <div class="nav-buttons">
+                <button onclick="showSection('home')" class="active">Homepage</button>
+                <button onclick="showSection('trainees')">Trainees</button>
+                <button onclick="showSection('schedule')">Schedule</button>
+                <button onclick="showSection('news')">News</button>
+                <button onclick="showSection('support')">Support</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="section intro active">
+        <h2>Welcome to IST Star</h2>
+        <p>IST Star is the highly anticipated new boy group from IST Entertainment, rumored to debut in late 2025 following *Boys II Planet*. Featuring rising talents like Park Donggyu, Kim Si Hwan, Rensho, and Arctic, plus three mystery members. Stay tuned for official announcements!</p>
+    </section>
+
+    <section id="trainees" class="section members"></section>
+
+    <section id="schedule" class="section schedule">
+        <h2>Schedule</h2>
+        <p>Stay tuned for IST Star's upcoming events!</p>
+        <ul>
+            <li><strong>Late 2025:</strong> Rumored debut showcase (TBA)</li>
+            <li><strong>Early 2026:</strong> Fan-meeting tour (TBA)</li>
+            <li><strong>Boys II Planet Finale:</strong> Watch on Mnet for final lineup reveal!</li>
+        </ul>
+    </section>
+
+    <section id="news" class="section news">
+        <h2>News</h2>
+        <p>Latest updates on IST Star:</p>
+        <ul>
+            <li><strong>Sep 2025:</strong> Rumors swirl about final 7-member lineup from *Boys II Planet*.</li>
+            <li><strong>Aug 2025:</strong> IST Ent teases new group with cryptic social media posts.</li>
+            <li><strong>Jul 2025:</strong> Park Donggyu and Kim Si Hwan spotted at IST studios.</li>
+        </ul>
+    </section>
+
+    <section id="support" class="section support">
+        <h2>Support IST Star</h2>
+        <p>Join the fandom! Follow official channels and support the boys:</p>
+        <ul>
+            <li><a href="https://ist-ent.co.kr" target="_blank">Official IST Entertainment Website</a></li>
+            <li><a href="https://www.instagram.com/ist_star_official/" target="_blank">Official Instagram (TBA)</a></li>
+            <li>Fancafe: Coming soon!</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 IST Star Fan Site | Based on Rumors | <a href="https://ist-ent.co.kr" target="_blank">Official IST Ent</a></p>
+        <div class="social">
+            <a href="https://www.instagram.com/ist_star_official/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/ist_star_official" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
+            document.querySelectorAll('.nav-buttons button').forEach(button => button.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        fetch('members.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('trainees');
+                data.forEach(member => {
+                    const card = document.createElement('div');
+                    card.className = 'member-card';
+                    card.innerHTML = `
+                        <img src="${member.photo}" alt="${member.name}">
+                        <div class="member-name">${member.name}</div>
+                        <p><strong>Age:</strong> ${member.age} | <strong>Nationality:</strong> ${member.nationality}</p>
+                        <p><strong>Position:</strong> ${member.position}</p>
+                        <p><strong>Fun Fact:</strong> ${member.funFact}</p>
+                        <div class="social">
+                            <a href="${member.instagram}" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            })
+            .catch(error => console.error('Error loading members:', error));
+    </script>
+</body>
+</html>
