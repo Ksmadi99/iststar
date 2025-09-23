@@ -1,1 +1,18 @@
-z
+[
+    {
+        "category": "evaluation",
+        "date": "Sep 23, 2025",
+        "title": "Monthly Evaluation Results Announced",
+        "description": "The latest monthly evaluation has been completed, showcasing impressive improvements from all trainees in vocal, dance, and performance skills.",
+        "readTime": "3 min read",
+        "urgent": false
+    },
+    {
+        "category": "announcement",
+        "date": "Sep 23, 2025",
+        "title": "URGENT: IST Clarification on Sihwan + Debut Date Announcement",
+        "description": "IST Entertainment addresses rumors about Kim Si Hwan’s past trainee drama, confirming his spot with an apology arc resolution. Official debut date will be revealed this week! Stay tuned for the biggest announcement of the year.",
+        "readTime": "2 min read",
+        "urgent": true
+    }
+]
