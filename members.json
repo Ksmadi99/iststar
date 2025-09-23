@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Park Donggyu",
+    "age": 20,
+    "nationality": "South Korean",
+    "position": "Main Vocalist, Rapper",
+    "funFact": "Former TWS pre-debut trainee; specialty in leg wrestling!",
+    "instagram": "https://www.instagram.com/p_donggyu_official/",
+    "photo": "https://source.unsplash.com/200x200/?kpop,boy,portrait&sig=1"
+  },
+  {
+    "name": "Kim Si Hwan",
+    "age": 19,
+    "nationality": "South Korean",
+    "position": "Lead Dancer, Sub-Vocalist",
+    "funFact": "Apologized for past immaturity; strong stage presence from Boys II Planet.",
+    "instagram": "https://www.instagram.com/kim_sihwan_ist/",
+    "photo": "https://source.unsplash.com/200x200/?kpop,dancer&sig=2"
+  },
+  {
+    "name": "Rensho",
+    "age": 17,
+    "nationality": "Japanese",
+    "position": "Main Dancer",
+    "funFact": "Known as the 'push-up guy'; trained only 6 months before the show.",
+    "instagram": "https://www.instagram.com/rensho_ist_jp/",
+    "photo": "https://source.unsplash.com/200x200/?japanese,idol&sig=3"
+  },
+  {
+    "name": "Arctic",
+    "age": 16,
+    "nationality": "Thai",
+    "position": "Lead Rapper, Visual",
+    "funFact": "Good at dancing; brings international flair to the group.",
+    "instagram": "https://www.instagram.com/arctic_ist_th/",
+    "photo": "https://source.unsplash.com/200x200/?thai,boy&sig=4"
+  },
+  {
+    "name": "Unknown Member 1",
+    "age": "?",
+    "nationality": "?",
+    "position": "Sub-Vocalist",
+    "funFact": "Mystery trainee – debut surprise incoming!",
+    "instagram": "https://www.instagram.com/ist_star_member1/",
+    "photo": "https://source.unsplash.com/200x200/?mystery,kpop&sig=5"
+  },
+  {
+    "name": "Unknown Member 2",
+    "age": "?",
+    "nationality": "?",
+    "position": "Main Rapper",
+    "funFact": "Teased in rumors; expected to bring fire lyrics.",
+    "instagram": "https://www.instagram.com/ist_star_member2/",
+    "photo": "https://source.unsplash.com/200x200/?rapper,portrait&sig=6"
+  },
+  {
+    "name": "Unknown Member 3",
+    "age": "?",
+    "nationality": "?",
+    "position": "Center, All-Rounder",
+    "funFact": "The wildcard – fans are buzzing!",
+    "instagram": "https://www.instagram.com/ist_star_member3/",
+    "photo": "https://source.unsplash.com/200x200/?kpop,center&sig=7"
+  }
+]
