@@ -3,28 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IST Star - Upcoming Boy Group by IST Entertainment</title>
+    <title>IST Star - Rumored Boy Group by IST Entertainment</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background: linear-gradient(135deg, #1a1a2e, #16213e); color: #fff; }
-        header { background: rgba(0,0,0,0.8); padding: 10px 20px; position: sticky; top: 0; z-index: 100; border-bottom: 2px solid #ff6b6b; }
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background: linear-gradient(135deg, #e6e6fa, #f0f8ff); color: #333; }
+        header { background: rgba(255,255,255,0.9); padding: 10px 20px; position: sticky; top: 0; z-index: 100; border-bottom: 2px solid #ff9aa2; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
-        .nav h1 { margin: 0; font-size: 2em; color: #ff6b6b; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .nav h1 { margin: 0; font-size: 2em; color: #ff9aa2; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); }
         .nav-buttons { display: flex; gap: 10px; }
-        .nav-buttons button { background: #ff6b6b; border: none; padding: 10px 20px; color: #fff; font-size: 1em; cursor: pointer; border-radius: 5px; transition: background 0.3s; }
-        .nav-buttons button:hover { background: #e55a5a; }
-        .nav-buttons button.active { background: #fff; color: #1a1a2e; }
-        .section { max-width: 1200px; margin: 20px auto; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px; display: none; }
+        .nav-buttons button { background: #ff9aa2; border: none; padding: 10px 20px; color: #fff; font-size: 1em; cursor: pointer; border-radius: 20px; transition: background 0.3s, transform 0.2s; }
+        .nav-buttons button:hover { background: #ffb3b3; transform: translateY(-2px); }
+        .nav-buttons button.active { background: #fff; color: #ff9aa2; }
+        .section { max-width: 1200px; margin: 20px auto; padding: 20px; background: rgba(255,255,255,0.8); border-radius: 15px; display: none; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
         .section.active { display: block; }
         .intro, .schedule, .news, .support { text-align: center; }
         .members { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 20px; }
-        .member-card { background: rgba(255,255,255,0.1); border-radius: 10px; padding: 15px; text-align: center; transition: transform 0.3s; }
-        .member-card:hover { transform: scale(1.05); }
-        .member-card img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid #ff6b6b; }
-        .member-name { font-size: 1.5em; margin: 10px 0; color: #ff6b6b; }
-        .social a { color: #fff; font-size: 1.5em; margin: 0 10px; text-decoration: none; }
-        footer { background: rgba(0,0,0,0.8); padding: 20px; text-align: center; }
+        .member-card { background: rgba(255,255,255,0.9); border-radius: 15px; padding: 15px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; border: 1px solid #ff9aa2; }
+        .member-card:hover { transform: scale(1.05); box-shadow: 0 6px 15px rgba(255,154,162,0.3); }
+        .member-card img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid #ff9aa2; }
+        .member-name { font-size: 1.5em; margin: 10px 0; color: #ff9aa2; }
+        .social a { color: #ff9aa2; font-size: 1.5em; margin: 0 10px; text-decoration: none; transition: color 0.3s; }
+        .social a:hover { color: #ffb3b3; }
+        footer { background: rgba(255,255,255,0.9); padding: 20px; text-align: center; color: #333; border-top: 2px solid #ff9aa2; }
         footer .social { margin-top: 10px; }
+        .rumor-tag { background: #ff9aa2; color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; }
         @media (max-width: 768px) { 
             .nav { flex-direction: column; gap: 10px; }
             .nav-buttons { flex-wrap: wrap; justify-content: center; }
@@ -50,46 +52,53 @@
 
     <section id="home" class="section intro active">
         <h2>Welcome to IST Star</h2>
-        <p>IST Star is the highly anticipated new boy group from IST Entertainment, rumored to debut in late 2025 following *Boys II Planet*. Featuring rising talents like Park Donggyu, Kim Si Hwan, Rensho, and Arctic, plus three mystery members. Stay tuned for official announcements!</p>
+        <p>IST Star is the highly anticipated new boy group from IST Entertainment, rumored to debut in late 2025/early 2026 following the <em>Boys II Planet</em> survival show. Featuring rising talents like Park Donggyu, Kim Si Hwan, Rensho, and Arctic, plus three speculated mystery members. Based on online buzz, the group aims for a "stellar" space-themed concept. Stay tuned – official reveal expected post-finale!</p>
+        <span class="rumor-tag">Based on Fan Rumors</span>
     </section>
 
     <section id="trainees" class="section members"></section>
 
     <section id="schedule" class="section schedule">
-        <h2>Schedule</h2>
-        <p>Stay tuned for IST Star's upcoming events!</p>
+        <h2>Schedule (Rumored)</h2>
+        <p>Stay tuned for IST Star's upcoming events based on <em>Boys II Planet</em> leaks!</p>
         <ul>
-            <li><strong>Late 2025:</strong> Rumored debut showcase (TBA)</li>
-            <li><strong>Early 2026:</strong> Fan-meeting tour (TBA)</li>
-            <li><strong>Boys II Planet Finale:</strong> Watch on Mnet for final lineup reveal!</li>
+            <li><strong>Sep 23, 2025:</strong> Mid-season evaluations air on Mnet; Rensho rumored to shine in dance battle.</li>
+            <li><strong>Nov 2025:</strong> Show finale – final lineup reveal (IST Star name leaked on X).</li>
+            <li><strong>Late 2025:</strong> Debut showcase with space-themed teaser (TBA).</li>
+            <li><strong>Early 2026:</strong> Fan-meeting tour in Seoul and Japan (international focus due to Rensho/Arctic).</li>
         </ul>
+        <span class="rumor-tag">From Fan Forums & X Threads</span>
     </section>
 
     <section id="news" class="section news">
-        <h2>News</h2>
-        <p>Latest updates on IST Star:</p>
+        <h2>News (Latest Rumors)</h2>
+        <p>Hot updates from the internet/X:</p>
         <ul>
-            <li><strong>Sep 2025:</strong> Rumors swirl about final 7-member lineup from *Boys II Planet*.</li>
-            <li><strong>Aug 2025:</strong> IST Ent teases new group with cryptic social media posts.</li>
-            <li><strong>Jul 2025:</strong> Park Donggyu and Kim Si Hwan spotted at IST studios.</li>
+            <li><strong>Sep 2025:</strong> <em>Boys II Planet</em> voting scandal rumors – Si Hwan's fanbase surges after apology arc.</li>
+            <li><strong>Aug 2025:</strong> IST Ent teases "starry" group logo; fans link to Donggyu's vocal clips.</li>
+            <li><strong>Jul 2025:</strong> Arctic spotted in Bangkok fan cam – international debut hype builds.</li>
+            <li><strong>Jun 2025:</strong> Unknown members teased as "Minho" (vocal), "Jae" (Chinese), and maknae rapper in leaked trainee lists.</li>
         </ul>
+        <span class="rumor-tag">Circulating on Allkpop, Pinkvilla, & X</span>
     </section>
 
     <section id="support" class="section support">
         <h2>Support IST Star</h2>
-        <p>Join the fandom! Follow official channels and support the boys:</p>
+        <p>Join the fandom wave! Based on rumors:</p>
         <ul>
             <li><a href="https://ist-ent.co.kr" target="_blank">Official IST Entertainment Website</a></li>
-            <li><a href="https://www.instagram.com/ist_star_official/" target="_blank">Official Instagram (TBA)</a></li>
-            <li>Fancafe: Coming soon!</li>
+            <li><a href="https://www.instagram.com/ist_ent_official/" target="_blank">IST Ent Instagram</a> – Follow for teasers!</li>
+            <li>Stream <em>Boys II Planet</em> on Mnet/YouTube for voting power.</li>
+            <li>Fan Projects: #ISTStarDebut2025 on X; fancafe petitions circulating.</li>
         </ul>
+        <span class="rumor-tag">Fan-Led Initiatives</span>
     </section>
 
     <footer>
-        <p>&copy; 2025 IST Star Fan Site | Based on Rumors | <a href="https://ist-ent.co.kr" target="_blank">Official IST Ent</a></p>
+        <p>&copy; 2025 IST Star Fan Site | Rumors Only – Not Official | <a href="https://ist-ent.co.kr" target="_blank">Official IST Ent</a></p>
         <div class="social">
-            <a href="https://www.instagram.com/ist_star_official/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://x.com/ist_star_official" target="_blank"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/ist_ent_official/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/ist_ent" target="_blank"><i class="fab fa-x-twitter"></i></a>
         </div>
     </footer>
 
