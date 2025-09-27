@@ -1,69 +1,26 @@
 [
   {
     "name": "Park Donggyu",
-    "age": 20,
-    "nationality": "South Korean",
-    "position": "Main Vocalist, Rapper",
-    "funFact": "Former TWS pre-debut trainee; rumored to lead vocals in IST Star after topping Episode 8 polls on Boys II Planet.",
-    "instagram": "https://www.instagram.com/0v___x0/",
-    "photo": "https://kprofiles.com/wp-content/uploads/2025/06/park-donggyu-1.jpg"
-    "folder": "parkdonggyu"
+    "photo": "images/parkdonggyu.jpg",
+    "folder": "parkdonggyu",
+    "page": "members/parkdonggyu/index.html"
   },
   {
     "name": "Kim Si Hwan",
-    "age": 19,
-    "nationality": "South Korean",
-    "position": "Lead Dancer, Sub-Vocalist",
-    "funFact": "Apologized for past trainee drama; rumors say his redemption arc secures his spot with viral dance covers.",
-    "instagram": "https://www.instagram.com/0v___x0/",
-    "photo": "https://kpopping.com/images/kpop/2025/09/kim-si-hwan-boys-ii-planet-profile.jpg"
-    "folder": "parkdonggyu"
+    "photo": "images/sihwan.jpg",
+    "folder": "sihwan",
+    "page": "members/sihwan/index.html"
   },
   {
     "name": "Rensho",
-    "age": 17,
-    "nationality": "Japanese",
-    "position": "Main Dancer",
-    "funFact": "The 'push-up guy' from training clips; X rumors hype his global appeal for Japan promo post-debut.",
-    "instagram": "https://www.instagram.com/0v___x0/",
-    "photo": "https://kpopping.com/images/kpop/2025/07/rensho-boys-ii-planet-id-photo.jpg"
-    "folder": "parkdonggyu"
+    "photo": "images/rensho.jpg",
+    "folder": "rensho",
+    "page": "members/rensho/index.html"
   },
   {
     "name": "Arctic",
-    "age": 16,
-    "nationality": "Thai",
-    "position": "Lead Rapper, Visual",
-    "funFact": "Brings Thai flair; fan leaks suggest he's the 'visual center' in rumored space concept MV.",
-    "instagram": "https://www.instagram.com/0v___x0/",
-    "photo": "https://kpop.fandom.com/wiki/Arctic?file=Arctic_Boys_II_Planet.jpg"
-    "folder": "parkdonggyu"
-  },
-  {
-    "name": "Minho (Rumored Unknown 1)",
-    "age": "?",
-    "nationality": "South Korean",
-    "position": "Sub-Vocalist, All-Rounder",
-    "funFact": "Speculated Korean trainee from leaked lists; rumored for harmony focus after Episode 10 duet.",
-    "instagram": "https://www.instagram.com/0v___x0/",
-    "photo": "https://source.unsplash.com/200x200/?kpop,vocal&sig=5"
-  },
-  {
-    "name": "Jae (Rumored Unknown 2)",
-    "age": "?",
-    "nationality": "Chinese",
-    "position": "Main Rapper",
-    "funFact": "International wildcard; X threads buzz about his bilingual raps for global debut push.",
-    "instagram": "https://www.instagram.com/0v___x0/",
-    "photo": "https://source.unsplash.com/200x200/?chinese,rapper&sig=6"
-  },
-  {
-    "name": "Unknown Maknae (Rumored Unknown 3)",
-    "age": 15,
-    "nationality": "South Korean",
-    "position": "Lead Dancer, Maknae",
-    "funFact": "Youngest speculated; fans predict energetic choreo role in late 2025 teaser.",
-    "instagram": "https://www.instagram.com/0v___x0/",
-    "photo": "https://source.unsplash.com/200x200/?kpop,young&sig=7"
+    "photo": "images/arctic.jpg",
+    "folder": "arctic",
+    "page": "members/arctic/index.html"
   }
 ]
