@@ -1,93 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Park Donggyu — IST Star</title>
-  <link rel="stylesheet" href="../../style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Park Donggyu | BOYS2PLANET</title>
   <style>
-    .member-box{max-width:760px;margin:24px auto;padding:18px}
-    .member-photo{max-width:240px;border-radius:8px}
-    .member-buttons a, .member-buttons button{
-      display:inline-block;margin:8px 8px 0 0;padding:8px 12px;border-radius:8px;text-decoration:none;border:none;cursor:pointer;
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      margin: 0;
+      padding: 0;
     }
-    .x-button{background:#000;color:#fff}
-    .letter-button{background:#eee;color:#111}
-    .instagram-button{background:#E1306C;color:#fff}
-    .back-link{display:inline-block;margin-top:18px}
-    #social-feeds{margin-top:16px}
-    #social-feeds section{margin-bottom:24px}
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    p {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+    .twitter-feed {
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="../../index.html">Home</a>
-    </nav>
-  </header>
+  <div class="container">
+    <h1>Park Donggyu</h1>
+    <p>BOYS2PLANET Trainee 🐶✨<br>Support him and stay updated with his latest IST Entertainment tweets!</p>
 
-  <main class="member-box">
-    <img src="../../images/parkdonggyu.jpg" alt="Park Donggyu" class="member-photo">
-    <h1 id="member-name">Park Donggyu 🐧</h1>
-    <p id="member-bio">IST Entertainment trainee — details loaded below (if available).</p>
-
-    <div class="member-buttons">
-      <a class="letter-button" href="letter.html" target="_blank">✉️ Official Letter</a>
-      <button id="load-x-posts" class="x-button"><i class="fab fa-x-twitter"></i> View X Posts</button>
-      <button id="load-instagram" class="instagram-button"><i class="fab fa-instagram"></i> View Instagram</button>
+    <div class="twitter-feed">
+      <!-- Live Twitter feed for Park Donggyu -->
+      <a class="twitter-timeline"
+         href="https://twitter.com/search?q=from%3Aist_ent%20%23PARKDONGGYU&f=live"
+         data-width="600"
+         data-height="600"
+         data-theme="light">
+         Tweets by IST ent about #PARKDONGGYU
+      </a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
-
-    <section id="member-details" style="margin-top:16px"></section>
-
-    <div id="social-feeds"></div>
-
-    <p class="back-link"><a href="../../index.html">← Back to homepage</a></p>
-  </main>
-
-  <script>
-  // Load details.json if present
-  fetch('details.json')
-    .then(r => { if(!r.ok) throw 0; return r.json(); })
-    .then(d => {
-      document.getElementById('member-name').textContent = d.name || d.korean_name || 'Member';
-      const bio = [
-        d.status ? d.status : '',
-        d.show_participation ? ('Shows: ' + (Array.isArray(d.show_participation) ? d.show_participation.join(', ') : d.show_participation)) : '',
-        d.hobbies ? ('Hobbies: ' + d.hobbies.join(', ')) : ''
-      ].filter(Boolean).join(' • ');
-      if(bio) document.getElementById('member-bio').textContent = bio;
-      if(d.notes){
-        const s = document.getElementById('member-details');
-        s.innerHTML = '<strong>Notes:</strong><ul>' + d.notes.map(n => '<li>' + n + '</li>').join('') + '</ul>';
-      }
-    }).catch(()=>{/* ignore if missing */});
-
-  // X (Twitter) posts
-  document.getElementById('load-x-posts').addEventListener('click', function() {
-    const container = document.getElementById('social-feeds');
-    container.innerHTML = `
-      <section>
-        <h3>Live X Posts #ParkDonggyu</h3>
-        <a class="twitter-timeline" data-width="400" data-height="600" href="https://twitter.com/hashtag/ParkDonggyu">
-          #ParkDonggyu Tweets
-        </a>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      </section>
-    `;
-  });
-
-  // Instagram embed (static, user profile)
-  document.getElementById('load-instagram').addEventListener('click', function() {
-    const container = document.getElementById('social-feeds');
-    container.innerHTML += `
-      <section>
-        <h3>Instagram</h3>
-        <iframe src="https://www.instagram.com/p/XXXXXXXX/embed" width="400" height="480" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
-      </section>
-    `;
-  });
-  </script>
+  </div>
 </body>
 </html>
-
