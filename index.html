@@ -71,49 +71,24 @@
     <footer>
         <p>&copy; 2025 IST Star Fan Site | Rumors Only – Not Official | <a href="https://ist-ent.co.kr" target="_blank">Official IST Ent</a></p>
     </footer>
+fetch('members.json')
+  .then(response => response.json())
+  .then(data => {
+    const container = document.getElementById('members-grid');
+    data.forEach(member => {
+      const div = document.createElement('div');
+      div.className = 'member';
+      div.innerHTML = `
+        <a href="${member.page}">
+          <img src="${member.photo}" alt="${member.name}'s profile">
+          <div class="member-name">${member.name}</div>
+        </a>
+      `;
+      container.appendChild(div);
+    });
+  })
+  .catch(error => console.error('Error loading members:', error));
 
-    <script>
-        fetch('members.json')
-            .then(response => response.json())
-            .then(data => {
-                const container = document.getElementById('members-grid');
-                data.forEach(member => {
-                    const div = document.createElement('div');
-                    div.className = 'member';
-                    div.innerHTML = `
-                        <img src="${member.photo}" alt="${member.name}'s profile">
-                        <div class="member-name">${member.name}</div>
-                        <a href="members/${member.folder}/post/x.html" class="x-button" target="_blank">
-                            <i class="fab fa-x-twitter"></i> View X Posts
-                        </a>
-                    `;
-                    container.appendChild(div);
-                });
-            })
-            .catch(error => console.error('Error loading members:', error));
-
-        fetch('news.json')
-            .then(response => response.json())
-            .then(data => {
-                const container = document.getElementById('news-items');
-                data.forEach(item => {
-                    const card = document.createElement('div');
-                    card.className = `news-card ${item.urgent ? 'urgent' : ''}`;
-                    card.innerHTML = `
-                        <span class="category">${item.category}</span>
-                        <div class="date">${item.date}</div>
-                        <div class="title">${item.title}</div>
-                        <div class="description">${item.description}</div>
-                        <div class="meta">
-                            <span>${item.readTime}</span>
-                            <a href="#" class="read-more">Read More</a>
-                        </div>
-                    `;
-                    container.appendChild(card);
-                });
-            })
-            .catch(error => console.error('Error loading news:', error));
-    </script>
 </body>
 </html>
 
