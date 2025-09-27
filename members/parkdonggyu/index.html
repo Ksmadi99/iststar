@@ -33,6 +33,11 @@
     .twitter-feed {
       text-align: center;
     }
+    /* Ensure the embed fits and looks clean */
+    .twitter-timeline {
+      max-width: 100%;
+      margin: 0 auto;
+    }
   </style>
 </head>
 <body>
@@ -43,10 +48,12 @@
     <div class="twitter-feed">
       <!-- Live Twitter feed for Park Donggyu -->
       <a class="twitter-timeline"
-         href="https://twitter.com/search?q=from%3Aist_ent%20%23PARKDONGGYU&f=live"
+         href="https://x.com/search?q=from%3Aist_ent%20%23PARKDONGGYU&src=typed_query&f=live"
          data-width="600"
          data-height="600"
-         data-theme="light">
+         data-theme="light"
+         data-chrome="nofooter transparent"
+         data-tweet-limit="10">
          Tweets by IST ent about #PARKDONGGYU
       </a>
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
