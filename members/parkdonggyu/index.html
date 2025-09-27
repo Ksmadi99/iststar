@@ -9,10 +9,15 @@
   <style>
     .member-box{max-width:760px;margin:24px auto;padding:18px}
     .member-photo{max-width:240px;border-radius:8px}
-    .member-buttons a{display:inline-block;margin:8px 8px 0 0;padding:8px 12px;border-radius:8px;text-decoration:none}
+    .member-buttons a, .member-buttons button{
+      display:inline-block;margin:8px 8px 0 0;padding:8px 12px;border-radius:8px;text-decoration:none;border:none;cursor:pointer;
+    }
     .x-button{background:#000;color:#fff}
     .letter-button{background:#eee;color:#111}
+    .instagram-button{background:#E1306C;color:#fff}
     .back-link{display:inline-block;margin-top:18px}
+    #social-feeds{margin-top:16px}
+    #social-feeds section{margin-bottom:24px}
   </style>
 </head>
 <body>
@@ -28,33 +33,61 @@
     <p id="member-bio">IST Entertainment trainee — details loaded below (if available).</p>
 
     <div class="member-buttons">
-      <a class="x-button" href="post/x.html" target="_blank"><i class="fab fa-x-twitter"></i> View X Posts</a>
       <a class="letter-button" href="letter.html" target="_blank">✉️ Official Letter</a>
+      <button id="load-x-posts" class="x-button"><i class="fab fa-x-twitter"></i> View X Posts</button>
+      <button id="load-instagram" class="instagram-button"><i class="fab fa-instagram"></i> View Instagram</button>
     </div>
 
     <section id="member-details" style="margin-top:16px"></section>
+
+    <div id="social-feeds"></div>
 
     <p class="back-link"><a href="../../index.html">← Back to homepage</a></p>
   </main>
 
   <script>
-    // Try to load details.json in same folder to show some extra info if present
-    fetch('details.json')
-      .then(r => { if(!r.ok) throw 0; return r.json(); })
-      .then(d => {
-        document.getElementById('member-name').textContent = d.name || d.korean_name || 'Member';
-        const bio = [
-          d.status ? d.status : '',
-          d.show_participation ? ('Shows: ' + (Array.isArray(d.show_participation) ? d.show_participation.join(', ') : d.show_participation)) : '',
-          d.hobbies ? ('Hobbies: ' + d.hobbies.join(', ')) : ''
-        ].filter(Boolean).join(' • ');
-        if(bio) document.getElementById('member-bio').textContent = bio;
-        if(d.notes){
-          const s = document.getElementById('member-details');
-          s.innerHTML = '<strong>Notes:</strong><ul>' + d.notes.map(n => '<li>' + n + '</li>').join('') + '</ul>';
-        }
-      })
-      .catch(()=>{/* details.json optional - ignore if missing */});
+  // Load details.json if present
+  fetch('details.json')
+    .then(r => { if(!r.ok) throw 0; return r.json(); })
+    .then(d => {
+      document.getElementById('member-name').textContent = d.name || d.korean_name || 'Member';
+      const bio = [
+        d.status ? d.status : '',
+        d.show_participation ? ('Shows: ' + (Array.isArray(d.show_participation) ? d.show_participation.join(', ') : d.show_participation)) : '',
+        d.hobbies ? ('Hobbies: ' + d.hobbies.join(', ')) : ''
+      ].filter(Boolean).join(' • ');
+      if(bio) document.getElementById('member-bio').textContent = bio;
+      if(d.notes){
+        const s = document.getElementById('member-details');
+        s.innerHTML = '<strong>Notes:</strong><ul>' + d.notes.map(n => '<li>' + n + '</li>').join('') + '</ul>';
+      }
+    }).catch(()=>{/* ignore if missing */});
+
+  // X (Twitter) posts
+  document.getElementById('load-x-posts').addEventListener('click', function() {
+    const container = document.getElementById('social-feeds');
+    container.innerHTML = `
+      <section>
+        <h3>Live X Posts #ParkDonggyu</h3>
+        <a class="twitter-timeline" data-width="400" data-height="600" href="https://twitter.com/hashtag/ParkDonggyu">
+          #ParkDonggyu Tweets
+        </a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </section>
+    `;
+  });
+
+  // Instagram embed (static, user profile)
+  document.getElementById('load-instagram').addEventListener('click', function() {
+    const container = document.getElementById('social-feeds');
+    container.innerHTML += `
+      <section>
+        <h3>Instagram</h3>
+        <iframe src="https://www.instagram.com/p/XXXXXXXX/embed" width="400" height="480" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+      </section>
+    `;
+  });
   </script>
 </body>
 </html>
+
