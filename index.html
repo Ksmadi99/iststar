@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Fan site for IST Star, rumored boy group from IST Entertainment">
     <title>IST Star - Rumored Boy Group by IST Entertainment</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -24,6 +25,7 @@
     </style>
 </head>
 <body>
+    <!-- Header / Navigation -->
     <header>
         <div class="nav">
             <a href="#home">Home</a>
@@ -34,61 +36,74 @@
         </div>
     </header>
 
-    <div class="section" id="home">
+    <!-- Home Section -->
+    <section class="section" id="home">
         <div class="intro">
             <h1>IST Star</h1>
             <p>Rumored to debut late 2025 from IST Entertainment’s <em>Boys II Planet</em>. Meet talents like Park Donggyu, Kim Si Hwan, Rensho, and Arctic!</p>
             <span class="rumor-tag">Based on Fan Rumors</span>
         </div>
-        <div class="section" id="members">
-            <h2>Meet the Trainees</h2>
-            <div class="members-grid" id="members-grid"></div>
-        </div>
-        <div class="section schedule" id="schedule">
-            <h2>Upcoming Schedule</h2>
-            <ul>
-                <li><strong>Today, Sep 23, 2025, 5:01 PM +08:</strong> Mid-season evaluations live on Mnet.</li>
-                <li><strong>Nov 2025:</strong> Finale and lineup reveal.</li>
-                <li><strong>Late 2025:</strong> Debut showcase teaser.</li>
-                <li><strong>Early 2026:</strong> Fan meetings in Seoul and Japan.</li>
-            </ul>
-            <span class="rumor-tag">From Fan Buzz</span>
-        </div>
-        <div class="section news" id="news">
-            <h2>Latest News</h2>
-            <div class="news-grid" id="news-items"></div>
-        </div>
-        <div class="section social-buttons" id="support">
-            <h2>Connect with IST Star</h2>
-            <a href="https://www.instagram.com/0v___x0/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-            <a href="https://x.com/ist_ent" target="_blank"><i class="fab fa-x-twitter"></i> X</a>
-            <a href="https://www.facebook.com/ISTEntertainment" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-            <a href="#" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
-            <a href="https://www.youtube.com/@ISTEntertainment" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
-        </div>
-    </div>
+    </section>
 
+    <!-- Members Section -->
+    <section class="section" id="members">
+        <h2>Meet the Trainees</h2>
+        <div class="members-grid" id="members-grid"></div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="section schedule" id="schedule">
+        <h2>Upcoming Schedule</h2>
+        <ul>
+            <li><strong>Today, Sep 23, 2025, 5:01 PM +08:</strong> Mid-season evaluations live on Mnet.</li>
+            <li><strong>Nov 2025:</strong> Finale and lineup reveal.</li>
+            <li><strong>Late 2025:</strong> Debut showcase teaser.</li>
+            <li><strong>Early 2026:</strong> Fan meetings in Seoul and Japan.</li>
+        </ul>
+        <span class="rumor-tag">From Fan Buzz</span>
+    </section>
+
+    <!-- News Section -->
+    <section class="section news" id="news">
+        <h2>Latest News</h2>
+        <div class="news-grid" id="news-items"></div>
+    </section>
+
+    <!-- Social / Support Section -->
+    <section class="section social-buttons" id="support">
+        <h2>Connect with IST Star</h2>
+        <a href="https://www.instagram.com/0v___x0/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://x.com/ist_ent" target="_blank"><i class="fab fa-x-twitter"></i> X</a>
+        <a href="https://www.facebook.com/ISTEntertainment" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="#" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+        <a href="https://www.youtube.com/@ISTEntertainment" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 IST Star Fan Site | Rumors Only – Not Official | <a href="https://ist-ent.co.kr" target="_blank">Official IST Ent</a></p>
     </footer>
-fetch('members.json')
-  .then(response => response.json())
-  .then(data => {
-    const container = document.getElementById('members-grid');
-    data.forEach(member => {
-      const div = document.createElement('div');
-      div.className = 'member';
-      div.innerHTML = `
-        <a href="${member.page}">
-          <img src="${member.photo}" alt="${member.name}'s profile">
-          <div class="member-name">${member.name}</div>
-        </a>
-      `;
-      container.appendChild(div);
-    });
-  })
-  .catch(error => console.error('Error loading members:', error));
 
+    <!-- JavaScript to Load Members -->
+    <script>
+    fetch('members.json')
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById('members-grid');
+            data.forEach(member => {
+                const div = document.createElement('div');
+                div.className = 'member';
+                div.innerHTML = `
+                    <a href="${member.page}">
+                        <img src="${member.photo}" alt="${member.name}'s profile">
+                        <div class="member-name">${member.name}</div>
+                    </a>
+                `;
+                container.appendChild(div);
+            });
+        })
+        .catch(error => console.error('Error loading members:', error));
+    </script>
 </body>
 </html>
 
