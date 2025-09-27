@@ -14,31 +14,5 @@
       "IST Entertainment released a statement about rumors regarding school transfer and past behavior. :contentReference[oaicite:0]{index=0}"
     ]
   },
-  "Rensho": {
-    "name": "Aoki Rensho",
-    "japanese_name": "青木錬昌",
-    "birthdate": "2007-12-19",
-    "birthplace": "Kumamoto, Japan",
-    "agency": "IST Entertainment",
-    "former_agency": "Kakao Entertainment",
-    "status": "Trainee",
-    "show_participation": ["Boys II Planet (2025)"],
-    "training_period": "6 months",
-    "mbti": "ENTP",
-    "languages": ["Japanese", "Korean"]
-  },
-  "Arctic": {
-    "name": "Peerawat Traiphukdee",
-    "thai_name": "พีรวัส ทรัพย์สุขดี",
-    "birthdate": "2008-10-09",
-    "birthplace": "Thailand",
-    "agency": "IST Entertainment",
-    "status": "Trainee",
-    "show_participation": ["Boys II Planet (2025)"],
-    "height_cm": 173,
-    "training_period": "1 year 11 months",
-    "mbti": "ENFJ",
-    "languages": ["Thai", "Korean"]
-  }
 }
 
