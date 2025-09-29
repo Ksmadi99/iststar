@@ -1,63 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Park Donggyu | BOYS2PLANET</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Park Donggyu</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       background-color: #f5f5f5;
-      color: #333;
-      margin: 0;
-      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 2rem;
     }
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #fff;
+    .card {
+      background: #fff;
+      padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 700px;
+      width: 100%;
     }
     h1 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 10px;
+      margin-bottom: 0.5rem;
     }
     p {
-      text-align: center;
-      font-size: 1.1rem;
-      margin-bottom: 30px;
-    }
-    .twitter-feed {
-      text-align: center;
-    }
-    /* Ensure the embed fits and looks clean */
-    .twitter-timeline {
-      max-width: 100%;
-      margin: 0 auto;
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="card">
     <h1>Park Donggyu</h1>
-    <p>BOYS2PLANET Trainee 🐶✨<br>Support him and stay updated with his latest IST Entertainment tweets!</p>
+    <p>BOYS2PLANET Trainee 🐶✨<br>
+    Support him and stay updated with his latest IST Entertainment tweets!</p>
 
-    <div class="twitter-feed">
-      <!-- Live Twitter feed for Park Donggyu -->
-      <a class="twitter-timeline"
-         href="https://x.com/search?q=from%3Aist_ent%20%23PARKDONGGYU&src=typed_query&f=live"
-         data-width="600"
-         data-height="600"
-         data-theme="light"
-         data-chrome="nofooter transparent"
-         data-tweet-limit="10">
-         Tweets by IST ent about #PARKDONGGYU
-      </a>
-      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div>
+    <h3>Latest Tweets from @ist_ent about #PARKDONGGYU</h3>
+
+    <!-- Filtered search: only @ist_ent + hashtag -->
+    <a class="twitter-timeline"
+       href="https://twitter.com/search?q=from%3Aist_ent%20%23PARKDONGGYU&src=typed_query&f=live"
+       data-width="600"
+       data-height="600">
+       Tweets by @ist_ent about #PARKDONGGYU
+    </a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
 </body>
 </html>
+
