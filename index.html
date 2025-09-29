@@ -3,185 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Park Donggyu | BOYS2PLANET</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    h1 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-    p {
-      text-align: center;
-      font-size: 1.1rem;
-      margin-bottom: 30px;
-    }
-    .twitter-feed {
-      text-align: left;
-    }
-    .loading {
-      text-align: center;
-      color: #657786;
-      font-style: italic;
-    }
-    .error {
-      text-align: center;
-      color: #e0245e;
-      background: #fdf2f8;
-      padding: 10px;
-      border-radius: 8px;
-      margin: 10px 0;
-    }
-    .tweet {
-      border: 1px solid #e1e8ed;
-      border-radius: 8px;
-      padding: 15px;
-      margin-bottom: 15px;
-      background-color: #f8f9fa;
-    }
-    .tweet-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-    .tweet-avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      margin-right: 10px;
-    }
-    .tweet-author {
-      font-weight: bold;
-      color: #1da1f2;
-    }
-    .tweet-handle {
-      color: #657786;
-      font-size: 0.9rem;
-    }
-    .tweet-time {
-      color: #657786;
-      font-size: 0.8rem;
-      margin-left: auto;
-    }
-    .tweet-content {
-      margin-bottom: 10px;
-      line-height: 1.4;
-      white-space: pre-wrap;
-    }
-    .tweet-media img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-    .tweet-link {
-      color: #1da1f2;
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-    .view-more {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .view-more a {
-      color: #1da1f2;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
+  <title>ISTSTAR</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Park Donggyu</h1>
-    <p>BOYS2PLANET Trainee 🐶✨<br>Support him and stay updated with his latest IST Entertainment tweets!</p>
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <div class="logo">ISTSTAR</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="members/parkdonggyu/index.html">Members</a></li>
+        <li><a href="awards/index.html">Awards</a></li>
+        <li><a href="news/index.html">News</a></li>
+        <li><a href="timeline/index.html">Timeline</a></li>
+        <li><a href="author/index.html">Author</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="twitter-feed">
-      <h3>Latest Tweets from @ist_ent about #PARKDONGGYU</h3>
-      <div id="feed-content" class="loading">Loading tweets...</div>
+  <!-- Intro -->
+  <section class="intro">
+    <h1>Welcome to ISTSTAR 🌟</h1>
+    <p>Your archive for IST Entertainment trainees & artists.</p>
+  </section>
+
+  <!-- Member Grid -->
+  <section class="members">
+    <h2>Members</h2>
+    <div class="member-grid">
+      <a href="members/parkdonggyu/index.html" class="member-card">
+        <img src="assets/images/parkdonggyu.jpg" alt="Park Donggyu">
+        <h3>Park Donggyu</h3>
+      </a>
+      <!-- Add more members later -->
     </div>
-  </div>
-
-  <script>
-    const BEARER_TOKEN = 'AAAAAAAAAAAAAAAAAAAAACTGxQEAAAAAtywBtBpudPKJ9ZvFX43o2GERhIM%3D21MdgJQPLFgaTZxeumUGYNDE4brZldvt7aQbFT5GbMUYqqZGL0'; // Replace with your X Bearer Token
-    const PROXY_URL = 'https://corsproxy.io/?'; // Free CORS proxy
-    const API_URL = `${PROXY_URL}https://api.twitter.com/2/tweets/search/recent?query=from%3Aist_ent%20%23PARKDONGGYU&tweet.fields=created_at%2Cauthor_id%2Cattachments&max_results=5`;
-
-    async function fetchTweets() {
-      const feed = document.getElementById('feed-content');
-      try {
-        const response = await fetch(API_URL, {
-          headers: {
-            'Authorization': `Bearer ${BEARER_TOKEN}`
-          }
-        });
-        if (!response.ok) {
-          if (response.status === 429) {
-            throw new Error('Rate limit exceeded. Try again in 15 minutes.');
-          }
-          throw new Error(`API Error: ${response.status}`);
-        }
-        const data = await response.json();
-        if (data.data && data.data.length > 0) {
-          displayTweets(data.data, data.includes ? data.includes.users : []);
-        } else {
-          feed.innerHTML = '<p>No recent tweets found.</p>';
-        }
-      } catch (error) {
-        console.error('Fetch error:', error);
-        feed.innerHTML = `<div class="error">Error loading tweets: ${error.message}. Check your token or rate limits. Fallback: <a href="https://x.com/search?q=from%3Aist_ent%20%23PARKDONGGYU&f=live" target="_blank">View on X</a></div>`;
-      }
-    }
-
-    function displayTweets(tweets, users) {
-      const feed = document.getElementById('feed-content');
-      let html = '';
-      const istEntUser = users.find(u => u.username === 'ist_ent') || { profile_image_url: 'https://pbs.twimg.com/profile_images/1458992493572521984/WeeILmuO.jpg' };
-
-      tweets.forEach(tweet => {
-        const time = new Date(tweet.created_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-        let mediaHtml = '';
-        if (tweet.attachments && tweet.attachments.media_keys) {
-          // Note: For full media, you'd need expansions; this is simplified
-          mediaHtml = '<div class="tweet-media"><img src="https://via.placeholder.com/300x200?text=Tweet+Media" alt="Media" onerror="this.style.display=\'none\'"></div>';
-        }
-        html += `
-          <div class="tweet">
-            <div class="tweet-header">
-              <img src="${istEntUser.profile_image_url}" alt="IST ent" class="tweet-avatar">
-              <div>
-                <div class="tweet-author">IST ent</div>
-                <div class="tweet-handle">@ist_ent</div>
-              </div>
-              <div class="tweet-time">${time}</div>
-            </div>
-            <div class="tweet-content">${tweet.text.replace(/\n/g, '<br>')}</div>
-            ${mediaHtml}
-            <a href="https://x.com/ist_ent/status/${tweet.id}" class="tweet-link" target="_blank">View on X</a>
-          </div>
-        `;
-      });
-      html += '<div class="view-more"><a href="https://x.com/search?q=from%3Aist_ent%20%23PARKDONGGYU&f=live" target="_blank">View More on X</a></div>';
-      feed.innerHTML = html;
-    }
-
-    // Load on page ready
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', fetchTweets);
-    } else {
-      fetchTweets();
-    }
-  </script>
+  </section>
 </body>
 </html>
