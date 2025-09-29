@@ -76,6 +76,11 @@ nav {
   border-radius: 8px;
 }
 
-.member-card:hover {
-  transform: scale(1.05);
+.intro {
+  background: #f9f9f9;
 }
+
+.card img {
+  border-radius: 8px;
+}
+
