@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>ISTSTAR</title>
-
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">ISTSTAR</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+  <!-- Floating sticky navbar -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark">
+    <div class="container justify-content-center">
+      <a class="navbar-brand" href="index.html">ISTSTAR</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+      <div class="collapse navbar-collapse" id="navLinks">
+        <ul class="navbar-nav mx-auto text-center">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="members/parkdonggyu/index.html">Members</a></li>
           <li class="nav-item"><a class="nav-link" href="awards/index.html">Awards</a></li>
@@ -32,36 +29,15 @@
     </div>
   </nav>
 
-  <!-- Intro -->
-  <section class="intro text-center py-5">
+  <!-- Your page content -->
+  <main class="mt-5 pt-4">
     <div class="container">
-      <h1 class="fw-bold">Welcome to ISTSTAR 🌟</h1>
-      <p class="lead">Your archive for IST Entertainment trainees & artists.</p>
+      <h1>Welcome to ISTSTAR</h1>
+      <p>Your archive for IST Entertainment trainees & artists.</p>
+      <!-- etc. -->
     </div>
-  </section>
+  </main>
 
-  <!-- Member Grid -->
-  <section class="members py-5">
-    <div class="container">
-      <h2 class="mb-4">Members</h2>
-      <div class="row g-4">
-        <!-- Example member card -->
-        <div class="col-6 col-md-4 col-lg-3">
-          <a href="members/parkdonggyu/index.html" class="text-decoration-none text-dark">
-            <div class="card shadow-sm h-100">
-              <img src="assets/images/parkdonggyu.jpg" class="card-img-top" alt="Park Donggyu">
-              <div class="card-body text-center">
-                <h5 class="card-title">Park Donggyu</h5>
-              </div>
-            </div>
-          </a>
-        </div>
-        <!-- Add more members later -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
